@@ -1,17 +1,14 @@
 #include "SAL.h"
 #include "ADD.h"
+#include "Hardware.h"
 #include <iostream>
-
-
-/*Function prototypes*/
-void loadInstructionsToMemory();
 
 
 int main()
 {
-	SAL* sal = new ADD;
+	Hardware myHardware;
+	/*Test method...*/
 	char userInput;
-	sal->execute();
 	std::cout << "Welcome to the SAL Interpreter for C++!" << std::endl;
 	while (true)
 	{
@@ -21,6 +18,20 @@ int main()
 		{
 		case 'q':
 			exit(0);
+		case 'r':
+			break;
+		case 'd':
+			break;
+		case 's':
+			break;
+		case 'i':
+			myHardware.readInstructionsFromMemory();
+			break;
+		}
+
+		for (int i = 0; i < myHardware.numInstruction; i++)
+		{
+			
 		}
 	}
 

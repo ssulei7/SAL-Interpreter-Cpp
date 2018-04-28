@@ -4,9 +4,8 @@
 #include "Hardware.h"
 class LDA : public SAL
 {
-protected:
-	char symbol_;
 public:
+	std::string symbol;
 	void execute();
 };
 #endif // !LDA_H

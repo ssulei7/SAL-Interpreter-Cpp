@@ -70,16 +70,32 @@
     <ClInclude Include="ADD.h" />
     <ClInclude Include="DEC.h" />
     <ClInclude Include="Hardware.h" />
+    <ClInclude Include="HLT.h" />
+    <ClInclude Include="JMP.h" />
+    <ClInclude Include="JVS.h" />
+    <ClInclude Include="JZS.h" />
     <ClInclude Include="LDA.h" />
     <ClInclude Include="LDB.h" />
     <ClInclude Include="LDI.h" />
     <ClInclude Include="SAL.h" />
     <ClInclude Include="ST.h" />
+    <ClInclude Include="XCH.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADD.cpp" />
+    <ClCompile Include="DEC.cpp" />
+    <ClCompile Include="Hardware.cpp" />
+    <ClCompile Include="HLT.cpp" />
+    <ClCompile Include="JMP.cpp" />
+    <ClCompile Include="JVS.cpp" />
+    <ClCompile Include="JZS.cpp" />
+    <ClCompile Include="LDA.cpp" />
+    <ClCompile Include="LDB.cpp" />
+    <ClCompile Include="LDI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SAL.cpp" />
+    <ClCompile Include="ST.cpp" />
+    <ClCompile Include="XCH.cpp" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -3,9 +3,8 @@
 #include "SAL.h"
 class ST : public SAL
 {
-protected:
-	char symbol_;
 public:
+	std::string symbol;
 	void execute();
 };
 #endif // !ST_H

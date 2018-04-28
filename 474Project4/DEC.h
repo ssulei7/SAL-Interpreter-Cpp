@@ -4,9 +4,8 @@
 #include "Hardware.h"
 class DEC : public SAL
 {
-protected:
-	char symbol_;
 public:
+	std::string symbol;
 	void execute();
 };
 #endif // !DEC_H

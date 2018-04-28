@@ -1,12 +1,11 @@
-#ifndef LDA_H
-#define LDA_H
+#ifndef LDB_H
+#define LDB_H
 #include "SAL.h"
 #include "Hardware.h"
-class LDA : public SAL
+class LDB : public SAL
 {
-protected:
-	char symbol_;
 public:
+	std::string symbol;
 	void execute();
 };
 #endif // !LDA_H

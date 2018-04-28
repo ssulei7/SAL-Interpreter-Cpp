@@ -4,9 +4,8 @@
 #include "Hardware.h"
 class LDI : public SAL
 {
-protected:
-	short value_;
 public:
+	short value;
 	void execute();
 };
 #endif // !LDI_H
