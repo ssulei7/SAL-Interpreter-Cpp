@@ -3,8 +3,8 @@
 void XCH::execute()
 {
 	Hardware* hardware = Hardware::getInstance();
-	short temp = short(hardware->registerA_);
-	hardware->registerA_ = short(hardware->registerB_);
+	long temp = long(hardware->registerA_);
+	hardware->registerA_ = long(hardware->registerB_);
 	hardware->registerB_ = temp;
 	hardware->PC += 1;
 }

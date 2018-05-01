@@ -103,7 +103,8 @@ void Hardware::createInstruction(int lineNum, std::string instruction, std::stri
 	else if (instruction == "LDI")
 	{
 		LDI* ldi = new LDI;
-		ldi->value = short(stoi(arg));
+		std::string argument = arg.c_str();
+		ldi->value = std::stol(argument, nullptr, 0);
 		pcMemory[lineNum] = ldi;
 	}
 	else if (instruction == "ST")

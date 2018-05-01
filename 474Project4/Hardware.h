@@ -23,9 +23,9 @@ class Hardware
 public:
 	short int PC;
 	SAL** pcMemory;
-	std::map<std::string, short> symbolTable;
-	short registerA_;
-	short registerB_;
+	std::map<std::string, long> symbolTable;
+	long registerA_;
+	long registerB_;
 	int zeroResultBit_;
 	int overFlowBit_;
 	bool halted_;

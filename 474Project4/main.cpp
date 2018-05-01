@@ -2,6 +2,7 @@
 #include "ADD.h"
 #include "Hardware.h"
 #include <iostream>
+#include <limits>
 
 /*Reference static variables*/
 
@@ -11,13 +12,17 @@ void executeAllInstructions();
 void storeStateOfMemory();
 
 
+
+
 void executeOneInstruction()
 {
 	Hardware* hardware = Hardware::getInstance();
 	if (hardware->halted_ == false)
 	{
 		hardware->pcMemory[hardware->PC]->execute();
+		std::cout << "Executed one instruction" << std::endl;
 	}
+
 }
 
 void executeAllInstructions()
@@ -51,6 +56,7 @@ int main()
 {
 	/*Test method...*/
 	char userInput;
+	std::cout << std::numeric_limits<long>::max() << "\n" << std::numeric_limits<long>::min();
 	std::cout << "Welcome to the SAL Interpreter for C++!" << std::endl;
 	while (true)
 	{

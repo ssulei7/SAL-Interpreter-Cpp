@@ -5,7 +5,7 @@
 class LDI : public SAL
 {
 public:
-	short value;
+	long value;
 	void execute();
 	std::string toString();
 };

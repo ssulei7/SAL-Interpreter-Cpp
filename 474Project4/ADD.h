@@ -2,7 +2,7 @@
 #define ADD_H
 #include "SAL.h"
 #include "Hardware.h"
-#include <climits>
+#include <limits>
 #include <iostream>
 class ADD : public SAL
 {
