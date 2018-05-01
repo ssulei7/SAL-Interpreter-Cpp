@@ -6,5 +6,6 @@ class HLT : public SAL
 {
 public:
 	void execute();
+	std::string toString();
 };
 #endif // !HLT_H

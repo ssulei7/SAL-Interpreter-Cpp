@@ -7,5 +7,6 @@ class JZS : public SAL
 public:
 	int number;
 	void execute();
+	std::string toString();
 };
 #endif // !JZS_H

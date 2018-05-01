@@ -7,5 +7,6 @@ class JVS : public SAL
 public:
 	int number;
 	void execute();
+	std::string toString();
 };
 #endif // !JVS_H

@@ -2,5 +2,11 @@
 
 void JMP::execute()
 {
-	std::cout << "I'm in JMP!" << std::endl;
+	Hardware* hardware = Hardware::getInstance();
+	hardware->PC = number;
+}
+
+std::string JMP::toString()
+{
+	return "JMP " + std::to_string(number);
 }

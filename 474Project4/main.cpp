@@ -31,6 +31,22 @@ void executeAllInstructions()
 	std::cout << "All instructions are executed!" << std::endl;
 }
 
+void storeStateOfMemory()
+{
+	Hardware* hardware = Hardware::getInstance();
+	std::ofstream outputfile("output.txt");
+	outputfile << "PC: " << std::to_string(hardware->PC) << std::endl;
+	outputfile << "Register A: " << std::to_string(hardware->registerA_) << std::endl;
+	outputfile << "Register B: " << std::to_string(hardware->registerB_) << std::endl;
+	outputfile << "Zero Result Bit: " << std::to_string(hardware->zeroResultBit_) << std::endl;
+	outputfile << "OverFlow Bit: " << std::to_string(hardware->overFlowBit_) << std::endl;
+	outputfile << "****INSTRUCTIONS BELOW****" << std::endl;
+	for (int i = 0; i < hardware->numInstruction; i++)
+	{
+		outputfile << "Address " << std::to_string(i) << " --> " <<  hardware->pcMemory[i]->toString() << std::endl;
+	}
+}
+
 int main()
 {
 	/*Test method...*/
@@ -52,6 +68,7 @@ int main()
 			executeOneInstruction();
 			break;
 		case 's':
+			storeStateOfMemory();
 			break;
 		case 'i':
 			myHardware->readInstructionsFromMemory();

@@ -7,5 +7,6 @@ class LDB : public SAL
 public:
 	std::string symbol;
 	void execute();
+	std::string toString();
 };
 #endif // !LDA_H

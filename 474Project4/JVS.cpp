@@ -2,5 +2,18 @@
 
 void JVS::execute()
 {
-	std::cout << "I'm in JVS!" << std::endl;
+	Hardware* hardware = Hardware::getInstance();
+	if (hardware->overFlowBit_ == 1)
+	{
+		hardware->PC = number;
+	}
+	else
+	{
+		hardware->PC += 1;
+	}
+}
+
+std::string JVS::toString()
+{
+	return "JVS " + std::to_string(number);
 }

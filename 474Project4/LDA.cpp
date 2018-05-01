@@ -2,5 +2,12 @@
 
 void LDA::execute()
 {
-	std::cout << "I'm in LDA!" << std::endl;
+	Hardware* hardware = Hardware::getInstance();
+	hardware->registerA_ = hardware->symbolTable[symbol];
+	hardware->PC += 1;
+}
+
+std::string LDA::toString()
+{
+	return "LDA " + symbol;
 }

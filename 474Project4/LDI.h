@@ -7,5 +7,6 @@ class LDI : public SAL
 public:
 	short value;
 	void execute();
+	std::string toString();
 };
 #endif // !LDI_H

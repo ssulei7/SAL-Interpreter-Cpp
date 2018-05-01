@@ -6,3 +6,8 @@ void LDI::execute()
 	hardware->registerA_ = value;
 	hardware->PC += 1;
 }
+
+std::string LDI::toString()
+{
+	return "LDI " + std::to_string(value);
+}
