@@ -3,6 +3,10 @@
 #include "Hardware.h"
 #include <iostream>
 
+/*Function prototypes*/
+void executeOneInstruction();
+void executeAllInstructions();
+void saveStateToFile();
 
 int main()
 {
@@ -31,7 +35,7 @@ int main()
 
 		for (int i = 0; i < myHardware.numInstruction; i++)
 		{
-			
+			myHardware.pcMemory[i]->execute();
 		}
 	}
 
