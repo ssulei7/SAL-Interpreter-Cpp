@@ -1,7 +1,7 @@
 #ifndef XCH_H
 #define XCH_H
-#include "Hardware.h"
 #include "SAL.h"
+#include <iostream>
 class XCH : public SAL
 {
 public:

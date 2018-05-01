@@ -1,6 +1,5 @@
 #ifndef SAL_H
 #define SAL_H
-#include <iostream>
 class SAL
 {
 public:

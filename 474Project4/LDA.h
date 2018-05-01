@@ -2,6 +2,7 @@
 #define LDA_H
 #include "SAL.h"
 #include "Hardware.h"
+#include <iostream>
 class LDA : public SAL
 {
 public:

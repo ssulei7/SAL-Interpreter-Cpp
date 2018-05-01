@@ -1,6 +1,7 @@
 #ifndef ST_H
 #define ST_H
 #include "SAL.h"
+#include <iostream>
 class ST : public SAL
 {
 public:

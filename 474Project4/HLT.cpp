@@ -2,5 +2,6 @@
 
 void HLT::execute()
 {
-	std::cout << "Im in HLT" << std::endl;
+	Hardware* hardware = Hardware::getInstance();
+	hardware->halted_ = true;
 }

@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include <string>
 #include "SAL.h"
 #include "ADD.h"
 #include "DEC.h"
@@ -20,17 +21,20 @@ class Hardware
 {
 
 public:
-	static short int PC;
-	static SAL** pcMemory;
-	static std::map<std::string, int> symbolTable;
-	static short registerA_;
-	static short registerB_;
-	static int zeroResultBit_;
-	static int overFlowBit_;
-	static bool halted_;
-	static int numInstruction;
+	short int PC;
+	SAL** pcMemory;
+	std::map<std::string, int> symbolTable;
+	short registerA_;
+	short registerB_;
+	int zeroResultBit_;
+	int overFlowBit_;
+	bool halted_;
+	int numInstruction;
 	void readInstructionsFromMemory();
+	static Hardware* getInstance();
 private:
+	static Hardware* instance;
 	void createInstruction(int lineNum, std::string instruction, std::string arg);
+	Hardware();
 };
 #endif // !HARDWARE_H

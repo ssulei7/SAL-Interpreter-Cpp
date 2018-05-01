@@ -1,7 +1,17 @@
 #include "Hardware.h"
 
-SAL** Hardware::pcMemory;
-int Hardware::numInstruction;
+Hardware* Hardware::instance = 0;
+
+Hardware::Hardware()
+{
+	PC = 0;
+	registerA_ = 0;
+	registerB_ = 0;
+	zeroResultBit_ = 0;
+	overFlowBit_ = 0;
+	halted_ = false;
+	numInstruction = 0;
+}
 
 void Hardware::readInstructionsFromMemory()
 {
@@ -11,7 +21,7 @@ void Hardware::readInstructionsFromMemory()
 	int size = 0;
 	std::string line;
 	getline(file, line);
-	size = stoi(line);
+	size = std::stoi(line);
 	numInstruction = size;
 
 	pcMemory = new SAL*[size];
@@ -30,6 +40,16 @@ void Hardware::readInstructionsFromMemory()
 	}
 
 	file.close();
+}
+
+Hardware * Hardware::getInstance()
+{
+	if (instance == 0)
+	{
+		instance = new Hardware();
+	}
+
+	return instance;
 }
 
 void Hardware::createInstruction(int lineNum, std::string instruction, std::string arg)

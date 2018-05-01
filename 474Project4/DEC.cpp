@@ -2,5 +2,7 @@
 
 void DEC::execute()
 {
-	std::cout << "I'm in DEC" << std::endl;
+	Hardware* hardware = Hardware::getInstance();
+	hardware->symbolTable[symbol] = 0;
+	hardware->PC += 1;
 }
